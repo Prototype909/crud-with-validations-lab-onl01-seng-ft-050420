@@ -6,6 +6,7 @@ class CreateSongs < ActiveRecord::Migration[5.0]
       t.integer :release_year
       t.string :artist_name
       t.string :genre
+      t.timestamps
     end
   end
 end
