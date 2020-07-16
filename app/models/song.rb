@@ -9,5 +9,4 @@ class Song < ActiveRecord::Base
 
   validates :release_year, if:  :released, presence: true
 
-
 end
