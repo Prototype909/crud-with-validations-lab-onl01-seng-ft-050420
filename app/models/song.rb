@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  #include ActiveModel::Validations
+  
   validates :title, presence: true
   validates :title, uniqueness: { scope: [:artist_name, :release_year]}
 
