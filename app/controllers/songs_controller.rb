@@ -1,11 +1,11 @@
 class SongsController < ApplicationController
     before_action :set_song, only: [:show, :edit, :update, :destroy]
 
-    def index 
+    def index
         @songs = Song.all
     end
 
-    def new 
+    def new
         @song = Song.new
     end
 
@@ -17,7 +17,7 @@ class SongsController < ApplicationController
             render :new
         end
     end
-    
+
     def show
     end
 
