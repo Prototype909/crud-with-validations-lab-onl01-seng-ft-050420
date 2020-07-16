@@ -7,6 +7,10 @@ class Song < ActiveRecord::Base
 
   validates :released, exclusion: { in: [nil]}
 
-  validates :release_year, if:  :released, presence: true
+  validates :release_year, numericality: {
+    only_integer: true,
+    presence: true, if: :released?,
+    less_than_or_equal_to: ->(_song) { Date.current.year }
+  }
 
 end
